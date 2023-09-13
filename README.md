@@ -19,6 +19,14 @@
     - prior가 균등분포면 MAP추정량은 MLE추정량과 동일
     - max_prob() 메서드를 통해 추정 가능
 
-### Chapter.4 - Estimating_Proportions
+### Chapter.4 - Estimating Proportions
 1. prob_ge(k), prob_le(k) 메서드 → CDF(P(X <= k))를 파악하는데 활용 가능
 2. np.allclose() 함수 → 부동소수점수의 차이를 무시하고 같은지 여부를 Boolean으로 반환
+
+### Chapter.5 - Estimating Counts
+1. HPD Credible Set과 Equal tail Credible Set
+    - Pmf 객체의 메서드는 아마도 Equal tail을 활용하는듯?
+2. quantile() 메서드와 credible_interval() 메서드 → Credible Interval 구하는데 활용
+
+### Chapter.6 - Odds and Addends
+1. Bayes Factor → Likelihood Ratio == Posterior Odds / Prior Odds
