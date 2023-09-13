@@ -7,3 +7,10 @@
 
 ### Chapter.1 - Probability
 1. 확률의 정의(빈도론적, 주관적)와 확률의 Axiom 고려
+
+### Chapter.2 - Bayes's Theorum
+1. Diachronic Bayes → Bayesian Update : 데이터 일부 D가 주어졌을 때, 가설 H의 확률을 갱신
+    - P(H|D) = P(H)P(D|H) / P(D), P(D) = ∑P(Hi)P(D|Hi)
+2. Divide and Conquer 전략 → 가설과 데이터 정리, 사전확률 도출, 각 가설 하에서의 가능도 도출
+
+### Chapter.3 - Distributions
