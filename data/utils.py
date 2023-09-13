@@ -68,7 +68,7 @@ def update_train(pmf, data):
 def odds(p):
     return p / (1-p)
 
-def prob(o):
+def odds_to_prob(o):
     return o / (o+1)
 
 def make_dice(sides):
