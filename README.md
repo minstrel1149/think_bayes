@@ -14,3 +14,6 @@
 2. Divide and Conquer 전략 → 가설과 데이터 정리, 사전확률 도출, 각 가설 하에서의 가능도 도출
 
 ### Chapter.3 - Distributions
+1. Pmf 클래스는 pandas의 시리즈를 상속받는 형태
+2. MAP추정량(Maximum a Posteriori) : 사후확률밀도함수를 최대화하는 파라미터를 추정값으로
+    - prior가 균등분포면 MAP추정량은 MLE추정량과 동일
