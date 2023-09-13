@@ -30,3 +30,4 @@
 
 ### Chapter.6 - Odds and Addends
 1. Bayes Factor → Likelihood Ratio == Posterior Odds / Prior Odds
+2. add_dist() 함수 혹은 메서드 → Addends, 즉 합의 분포를 표현
