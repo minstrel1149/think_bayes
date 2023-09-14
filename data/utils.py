@@ -175,6 +175,7 @@ def plot_contour(joint):
 def normalize(joint):
     prob_data = joint.to_numpy().sum()
     joint /= prob_data
+    # joint를 반환할 수도 있으나, Pmf객체의 normalize() 메서드의 경우 Pmf객체를 반환하지 않으므로 이렇게 구성
     return prob_data
 
 # Chapter.12

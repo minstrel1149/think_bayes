@@ -57,3 +57,4 @@
 
 ### Chapter.11 - Comparison
 1. np.meshgrid() 함수 → Tensor Product를 위한 grid 연산 진행, 두 벡터를 넣으면 두 개의 행렬을 반환
+2. Joint PDF와 Marginal PDF를 적절히 사용 → Bivariate Joint PDF는 DataFrame형태임을 고려
