@@ -49,3 +49,6 @@
 1. ss.gaussian_kde(sample) → sample에 대한 KDE PDF를 생성
 2. 내용을 분석하고 그에 맞춰 쪼개서 함수를 작성하는 것이 중요
     - ex. compute_prob_win, total_prob_win, compute_gain, expected_gain 등
+
+### Chapter.10 - Testing
+1. 베이지안 가설검정은 Null Hypothesis가 기준이 되는 것이 아니므로, Alternative에 대한 기준이 필요
