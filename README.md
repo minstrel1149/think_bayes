@@ -31,3 +31,8 @@
 ### Chapter.6 - Odds and Addends
 1. Bayes Factor → Likelihood Ratio == Posterior Odds / Prior Odds
 2. add_dist() 함수 혹은 메서드 → Addends, 즉 합의 분포를 표현
+
+### Chapter.7 - Minimum, Maximum and Mixture
+1. make_cdf(), make_pmf() 메서드를 통해 Pmf 객체를 PMF와 CDF로 서로 변경 가능
+    - quantile() 메서드를 체인하면서 분위 수 파악 가능, credible_interval() 메서드도 가능
+2. max_dist(n) 메서드 n개의 확률변수를 고른 후 그 중 최대값의 분포를 표시 ↔ min_dist(n) 메서드
