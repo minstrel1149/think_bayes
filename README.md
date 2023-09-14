@@ -36,3 +36,9 @@
 1. make_cdf(), make_pmf() 메서드를 통해 Pmf 객체를 PMF와 CDF로 서로 변경 가능
     - quantile() 메서드를 체인하면서 분위 수 파악 가능, credible_interval() 메서드도 가능
 2. max_dist(n) 메서드 n개의 확률변수를 고른 후 그 중 최대값의 분포를 표시 ↔ min_dist(n) 메서드
+
+### Chapter.8 - Poisson Processes
+1. ss.gamma()에 대한 정확한 이해 필요 → 내가 알고있는 감마분포랑 연결이 잘 안되는데..
+    - shape parameter가 1일 때는 지수분포가 되어야되는건데, 이걸 어떻게 맞추는지 확인
+    - ss.expon()에도 'scale'이라는 파라미터를 넣어줘야!
+    - 책에 있는 코드를 따라가기보다 내가 가지고 있는 지식과 연계하여 진행
