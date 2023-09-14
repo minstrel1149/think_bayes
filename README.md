@@ -52,3 +52,8 @@
 
 ### Chapter.10 - Testing
 1. 베이지안 가설검정은 Null Hypothesis가 기준이 되는 것이 아니므로, Alternative에 대한 기준이 필요
+2. 베이지안 밴딧 전략 + Thompson Sampling
+    - 데이터 수집과 활용을 동시에, 각 슬롯 머신을 고를 확률이 해당 머신이 가장 나을 확률에 비례하도록
+
+### Chapter.11 - Comparison
+1. np.meshgrid() 함수 → Tensor Product를 위한 grid 연산 진행, 두 벡터를 넣으면 두 개의 행렬을 반환

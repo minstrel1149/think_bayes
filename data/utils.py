@@ -154,7 +154,7 @@ def expected_gain(bid, posterior, sample_diff):
 
 # Chapter.10
 def update_machine(pmf, likelihood, data):
-    pmf *=likelihood[data]
+    pmf *= likelihood[data]
     pmf.normalize()
 
 # Chapter.11
