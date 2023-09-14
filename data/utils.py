@@ -98,7 +98,7 @@ def make_poisson_pmf(lam, qs):
 
 def update_poisson(pmf, data):
     k = data
-    lams = pmf.qs
+    lams = 1 / pmf.qs
     likelihood = ss.poisson(lams).pmf(k)
     posterior = pmf * likelihood
     posterior.normalize()
