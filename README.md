@@ -44,3 +44,8 @@
     - 책에 있는 코드를 따라가기보다 내가 가지고 있는 지식과 연계하여 진행
 2. 포아송 분포의 conjugate prior는 감마분포 → 이를 활용하는 방식 고찰
 3. prob_gt(), prob_lt() 함수 등 활용하여 확률 비교
+
+### Chapter.9 - Decision Analysis
+1. ss.gaussian_kde(sample) → sample에 대한 KDE PDF를 생성
+2. 내용을 분석하고 그에 맞춰 쪼개서 함수를 작성하는 것이 중요
+    - ex. compute_prob_win, total_prob_win, compute_gain, expected_gain 등

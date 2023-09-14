@@ -131,6 +131,7 @@ def compute_prob_win(diff, sample_diff):
 
 def total_prob_win(bid, posterior, sample_diff):
     total = 0
+    # items()메서드를 통해 인덱스(qs)와 값(ps)를 모두 가져옴
     for price, prob in posterior.items():
         diff = bid - price
         total += prob * compute_prob_win(diff, sample_diff)
