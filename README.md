@@ -82,4 +82,7 @@
     - 2회의 관측에서 관측된 여부를 가지고 다항분포 활용도 가능 → [k00, k10, k01, k11] 형태
 
 ### Chapter.16 - Logistic Regression
-1. 
+1. Log Odds에 대한 선형 결합 형태(b0 + b1*x1 + e) → 시그모이드 함수 이용
+    - Log Odds를 확률로? → scipy.special.expit 함수 사용. expit(inter + slope*xs) 형태
+    - x값의 경우 표준화를 진행하는 방법 : 추정치의 정확도를 높이고, 파라미터간 상관관계를 줄여주는 효과도 있음
+2. Empirical Bayes Method : Hyperparameter(사전분포의 모수)를 추정하여 대입한 후 분석하는 방법
