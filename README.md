@@ -68,3 +68,9 @@
 ### Chapter.13 - Inference
 1. np.meshgrid()를 활용하여 여러 모수들과 데이터에 대한 축을 만들고 확률밀도 형성
     - numpy의 prod() 메서드를 통해 3차원 Joint PDF를 2차원의 Marginal PDF로 전환 가능 → likelihood로 활용
+    - 데이터셋이 크거나 차원이 높아질 경우 likelihood가 매우 작아짐 → 요약값의 likelihood를 구하는 방법 활용
+        - 데이터셋을 포함한 3차원에서, 데이터는 요약값을 활용하므로 2차원으로 변경
+
+### Chapter.14 - Survival Analysis
+1. Weibull Distribution : 여러 범위의 제품 수명 분포를 나타내는데 좋은 모델 → ss.weibull_min(k, scale=lam) 활용
+    - Y = (X^(1/k)) / λ  cf. X ~ exp(1)의 Y에 대한 분포 → k가 1일 경우 지수분포 형태
