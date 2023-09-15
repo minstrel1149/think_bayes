@@ -307,6 +307,7 @@ def make_joint3(pmf1, pmf2, pmf3):
     joint2 = make_joint(pmf2, pmf1)
     joint2_pmf = Pmf(joint2.stack())
     joint3 = make_joint(pmf3, joint2_pmf)
+    # joint3의 index를 멀티인덱스로 바꿔줘야하므로 → pd.MultiIndex.from_tuples() 활용
     joint3.index = pd.MultiIndex.from_tuples(joint3.index)
     return Pmf(joint3.stack())
 
