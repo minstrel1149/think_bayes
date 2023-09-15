@@ -266,7 +266,7 @@ def weibull_dist(lam, k):
 
 def update_weibull(prior, data, complete=True):
     lam_mesh, k_mesh, data_mesh = np.meshgrid(prior.columns, prior.index, data)
-    if complete:
+    if complete is True:
         densities = weibull_dist(lam_mesh, k_mesh).pdf(data_mesh)
     else:
         densities = weibull_dist(lam_mesh, k_mesh).sf(data_mesh)

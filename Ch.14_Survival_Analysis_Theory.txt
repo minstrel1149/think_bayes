@@ -1,0 +1,47 @@
+### Survival Analysis 기초 이해
+
+Event - 생존/사망, 체류/사퇴 등과 같은 관심 경험
+Survival Time - 관심 있는 사건이 발생할 때까지의 기간
+Censorship Problem: Censored observations의 발생
+    - Event가 아직 발생하지 않은 경우
+    - 데이터가 누락된 경우 등
+    - Censorship Problem Type: Left-Censored, Right-Censored, Interval-Censored
+        - Interval-Censored: 관측 기간을 정확히 정의할 수 없는 경우
+        - Right-Censored는 Survival Analysis로 처리, 나머지는 데이터에 문제가 있으며 추가 조사할 필요
+
+Survival Function: S(t) = Pr(T > t), 특정 시간보다 더 오래 잔존할 확률
+Survival Function characteristics
+    - T ≥ 0 and 0 < t < ∞
+    - It is non-increasing
+    - If t=0, then S(t)=1(survival probability is 1 at time 0)
+    - If t=∞, then S(t)=0(survival probability goes to 0 as time goes to infinity)
+Lifetime distribution function: F(t) = Pr(T <= t) = 1 - S(t)
+Lifetime distribution density: f(t) = F'(t)
+    - S(t) = Pr(T > t) = ∫f(u)du(t→∞) = 1 - F(t)
+Hazard Function: h(t) = f(t) / S(t), 특정 시간 t에 고객이 이탈할 확률
+    - Survival Analysis에서는 Survival Function보다 Hazard Function가 더 큰 의미를 가진다.
+    - Hazard Function이 시간에 따라서 변하는 추세는 시간에 따른 위험의 변화를 나타내기 때문에,
+      Survival Function보다 위험의 변화에 대한 정보를 잘 파악할 수 있다.
+    - h(t) = f(t) / S(t) = f(t) / (1 - F(t)) = -d/dt(logS(t))
+    - S(t) = exp[-H(t)]
+Cumulative Hazard Function: H(t) = ∫h(u)du(0→t)
+
+Kaplan-Meier Estimator(Non-Parametic)
+    - Non-parametric이므로 분포에 대한 초기 가정이 불필요
+    - 전체 연구 기간 동안에 사건이 발생한 시점마다 구간생존율을 산출하여 최종적으로는 누적생존율을 산출
+    - P(t) = t시점까지의 생존자 수 / t시점까지의 관찰 대상 수
+    - S(t) = S(t-1) * P(t)
+
+Log Rank Test: Survival Function 분포를 비교하고 유의한 차이가 있는지 알아보는 가설 검정 기법
+    - 두 군을 합하여 전체 집단을 관찰 기간 순으로 배열하고, Censored 항목을 지우고 event가 발생한 구간만을 남긴다.
+    - 각 그룹별로 통계적으로 유의한 차이가 있는 지를 검정하는 작업
+
+Cox proportional hazard model: Hazard Function을 기저위험(underlying baseline hazard)와 매개변수로 나누어 표현하는 기법
+    - Basic Cox PH 모델은 매개변수가 시간과 무관하게 생존에 영향을 준다고 가정(Hazard assumption)
+    - 생존에 영향을 미치는 여러 risk factor, 즉 위험요소에 대한 분석
+    - 가정
+        - 샘플간에 생존 시간은 독립적이다
+        - 예측 변수와 hazard 사이에 곱셈 관계
+        - 시간이 지남에 따라 일정한 위험 비율
+    - 위험(Hazard)은 생존 곡선의 기울기로 정의
+    - 위험 비율은 두 그룹을 비교. 위험비가 2.0이면 한 그룹의 사망률은 다른 그룹의 사망률의 두 배

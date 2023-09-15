@@ -74,3 +74,4 @@
 ### Chapter.14 - Survival Analysis
 1. Weibull Distribution : 여러 범위의 제품 수명 분포를 나타내는데 좋은 모델 → ss.weibull_min(k, scale=lam) 활용
     - Y = (X^(1/k)) / λ  cf. X ~ exp(1)의 Y에 대한 분포 → k가 1일 경우 지수분포 형태
+2. ss.weibull_min()의 sf()메서드 활용하여 생존함수 표시 가능 → censored 데이터에 적용
