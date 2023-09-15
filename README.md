@@ -58,8 +58,13 @@
 ### Chapter.11 - Comparison
 1. np.meshgrid() 함수 → Tensor Product를 위한 grid 연산 진행, 두 벡터를 넣으면 두 개의 행렬을 반환
 2. Joint PDF와 Marginal PDF를 적절히 사용 → Bivariate Joint PDF는 DataFrame형태임을 고려
+    - Pmf객체의 marginal(dimension) 메서드 활용 가능
 
 ### Chapter.12 - Classification
 1. Naive Bayes의 특징 파악 → 각 Feature는 독립적이라고 '가정'
     - likelihood 구성 시 정규분포 등의 분포를 구축(ex. 해당 데이터의 분포도 파악)
     - Multivariate Normal Dist 등을 이용하여 덜 Naive하게 만들 수 있으나, 큰 의미 없음
+
+### Chapter.13 - Inference
+1. np.meshgrid()를 활용하여 여러 모수들과 데이터에 대한 축을 만들고 확률밀도 형성
+    - numpy의 prod() 메서드를 통해 3차원 Joint PDF를 2차원의 Marginal PDF로 전환 가능 → likelihood로 활용

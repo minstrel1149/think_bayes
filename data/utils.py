@@ -242,6 +242,7 @@ def update_norm(prior, data):
 def kde_from_pmf(pmf, n=101):
     kde = ss.gaussian_kde(pmf.qs, weights=pmf.ps)
     qs = np.linspace(pmf.qs.min(), pmf.qs.max(), n)
+    # kde객체에 대한 evaluate()메서드 숙지 필요
     ps = kde.evaluate(qs)
     kde_pmf = Pmf(ps, qs)
     kde_pmf.normalize()
