@@ -75,3 +75,8 @@
 1. Weibull Distribution : 여러 범위의 제품 수명 분포를 나타내는데 좋은 모델 → ss.weibull_min(k, scale=lam) 활용
     - Y = (X^(1/k)) / λ  cf. X ~ exp(1)의 Y에 대한 분포 → k가 1일 경우 지수분포 형태
 2. ss.weibull_min()의 sf()메서드 활용하여 생존함수 표시 가능 → censored 데이터에 적용
+
+### Chapter.15 - Mark and Recapture
+1. Mark and Recapture : 표본 추출 후 특정 표식 → 동일한 모집단에서 재추출 → 표식 개체 확인을 통해 모집단 크기 추정
+    - 초기하분포 활용 → N, K, n, k에서 첫 번째 추출 표본이 K, 두 번째 추출 표본이 n, 표식 표본이 k인 형태
+    - 2회의 관측에서 관측된 여부를 가지고 다항분포 활용도 가능 → [k00, k10, k01, k11] 형태
