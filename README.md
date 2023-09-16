@@ -106,3 +106,4 @@
 2. PyMC3 모델의 단계 : ① 사전분포의 득점률을 구하고 → ② 포아송분포에서 득점 수를 가져온다?
 3. PyMC3은 NUTS(No U-Turn Sampler) 방식으로 추출
     - 처음 생성되는 값은 수렴이 안되었으므로 버리는 형태 → 이걸 '튜닝'이라고 함
+    - model 안에 arviz 함수를 활용함으로써 분포도 표현 가능 → az.plot_posterior(trace, var_names)
