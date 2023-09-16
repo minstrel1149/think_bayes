@@ -86,3 +86,7 @@
     - Log Odds를 확률로? → scipy.special.expit 함수 사용. expit(inter + slope*xs) 형태
     - x값의 경우 표준화를 진행하는 방법 : 추정치의 정확도를 높이고, 파라미터간 상관관계를 줄여주는 효과도 있음
 2. Empirical Bayes Method : Hyperparameter(사전분포의 모수)를 추정하여 대입한 후 분석하는 방법
+
+### Chapter.17 - Regression
+1. Logistic Regression과 마찬가지로, 추정하고자 하는 파라미터에 균등사전분포를 거는 형태
+2. Pmf객체의 choice(n) 메서드 → Pmf객체의 qs(파라미터)를 랜덤으로 n개 추출
